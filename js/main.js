@@ -21,6 +21,7 @@ form.addEventListener("submit", async function (e) {
     console.log(data);
     localStorage.setItem("access", JSON.stringify(data.access_token));
     localStorage.setItem("refresh", JSON.stringify(data.refresh_token));
+    location.replace("/dashboard.html");
   } else {
     console.log("error");
   }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Freddy's Artisanal Halloween Candy Shop | Dashboard</title>
+  </head>
+  <body>
+    <nav>
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <img src="/assets/Freddys_Logo.svg" alt="" />
+        <ul class="navbar-links">
+          <li>Dashboard</li>
+          <li>Orders</li>
+          <li>Logout</li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <h2 style="margin-top: 20px; margin-bottom: 20px">Dashboard</h2>
+      <section class="summary">
+        <div class="summary-stats">
+          <p>Today</p>
+          <p>$1456/9 orders</p>
+        </div>
+        <div class="summary-stats">
+          <p>Last Week</p>
+          <p>$1456/9 orders</p>
+        </div>
+        <div class="summary-stats">
+          <p>Last Month</p>
+          <p>$1456/9 orders</p>
+        </div>
+      </section>
+      <section>
+        <h2 style="margin-top: 20px; margin-bottom: 20px">
+          Revenue(last 7 days)
+        </h2>
+        <canvas id="chart"> </canvas>
+      </section>
+    </main>
+    <script src="/js/dashboard.js"></script>
+  </body>
+</html>
