@@ -1,0 +1,55 @@
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading-section{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 150px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+body {
+  height: 100vh;
+}
+
+input {
+  padding: 10px;
+}
+
+button {
+  padding: 15px 0px;
+  font-size: 20px;
+  border: 2px solid gray;
+  background: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
