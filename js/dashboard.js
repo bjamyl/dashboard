@@ -101,3 +101,10 @@ setInterval(() => {
   updateToken();
 }, timer);
 
+const logout = document.getElementById('logout')
+logout.addEventListener('click',()=>{
+    localStorage.removeItem('access')
+    localStorage.removeItem('refresh')
+    location.replace("/");
+
+})
