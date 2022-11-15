@@ -38,18 +38,16 @@ const updateToken = async () => {
     },
   });
   if (res.status === 200) {
-    const data = await res.json()
-    console.log(data)
+    const data = await res.json();
+    console.log(data);
     console.log("Good");
     localStorage.setItem("access", JSON.stringify(data.access_token));
-
   } else {
     console.log("Error");
   }
 };
 
-let timer = 1000 * 60 * 1;
-let interval = setInterval(() => {
-  updateToken()
-}, 4000);
-
+let timer = 1000 * 60 * 14;
+setInterval(() => {
+  updateToken();
+}, timer);

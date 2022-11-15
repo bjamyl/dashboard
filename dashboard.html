@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/css/dashboard.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -45,7 +46,10 @@
         <h2 style="margin-top: 20px; margin-bottom: 20px">
           Revenue(last 7 days)
         </h2>
-        <canvas id="chart"> </canvas>
+        <canvas id="myChart" style="width:100%;max-width:700px"> </canvas>
+      </section>
+      <section>
+        <h2>Best Sellers</h2>
       </section>
     </main>
     <script src="/js/dashboard.js"></script>
