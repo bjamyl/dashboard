@@ -1,7 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -9,7 +9,7 @@ html {
 }
 
 .navbar-links {
-    margin-top: 10px;
+  margin-top: 10px;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -20,29 +20,37 @@ img {
   width: 80px;
 }
 
-nav{
-    display: flex;
-    height: 100vh;
-    width: 150px;
-    position: fixed;
-    flex-direction: column;
-    border-right: 2px solid gainsboro;
+nav {
+  display: flex;
+  height: 100vh;
+  width: 150px;
+  position: fixed;
+  flex-direction: column;
+  border-right: 2px solid gainsboro;
 }
 
-main{
-    margin-left: 200px;
+main {
+  margin-left: 200px;
 }
 .summary {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 100px;
 }
 
-.summary-stats{
-    border: 2px solid gainsboro;
-    padding: 10px;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.summary-stats {
+  border: 2px solid gainsboro;
+  padding: 10px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+li{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none
 }

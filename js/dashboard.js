@@ -12,13 +12,20 @@ const getDashboardData = async () => {
   if (res.status !== 200) return;
   const data = await res.json();
   const weeklyEntries = data.dashboard.sales_over_time_week;
+  const monthlyEntries = data.dashboard.sales_over_time_year;
 
   const weeklySales = [];
   Object.values(weeklyEntries).map((sale) => {
     weeklySales.push(sale.total);
   });
 
+  const monthlySales = [];
+  Object.values(monthlyEntries).map((sale) => {
+    monthlySales.push(sale.total);
+  });
+
   const ctx = document.getElementById("myChart").getContext("2d");
+  const monthctx = document.getElementById("myMonthlyChart").getContext("2d");
 
   let weeklyChart = new Chart(ctx, {
     type: "bar",
@@ -41,10 +48,35 @@ const getDashboardData = async () => {
     },
     options: {},
   });
+  let monthlyChart = new Chart(monthctx, {
+    type: "bar",
+    data: {
+      labels: [
+        "Jan",
+        "Feb",
+        "Mar",
+        "April",
+        "May",
+        "June",
+        "July",
+        "Aug",
+        "Sept",
+        "Oct",
+        "Nov",
+        "Dec",
+      ],
+      datasets: [
+        {
+          label: "Monthly Sales",
+          data: monthlySales,
+        },
+      ],
+    },
+    options: {},
+  });
 };
 
 getDashboardData();
-
 
 // Getting a new access token
 const updateToken = async () => {
@@ -67,4 +99,5 @@ const updateToken = async () => {
 let timer = 1000 * 60 * 14;
 setInterval(() => {
   updateToken();
-}, 50000);
+}, timer);
+

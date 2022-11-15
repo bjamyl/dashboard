@@ -20,8 +20,8 @@
       <div style="display: flex; flex-direction: column; align-items: center">
         <img src="/assets/Freddys_Logo.svg" alt="" />
         <ul class="navbar-links">
-          <li>Dashboard</li>
-          <li>Orders</li>
+          <li><a href="/dashboard.html">Dashboard</a></li>
+          <li><a href=""> Orders </a></li>
           <li>Logout</li>
         </ul>
       </div>
@@ -43,14 +43,29 @@
         </div>
       </section>
       <section>
-        <h2 style="margin-top: 20px; margin-bottom: 20px">
-          Revenue(last 7 days)
-        </h2>
-        <canvas id="myChart" style="width:100%;max-width:700px"> </canvas>
+        <div
+          style="
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+          "
+        >
+          <h2>Revenue(last 7 days)</h2>
+        </div>
+        <div class="chart-container">
+          <div class="wgraph active">
+            <canvas id="myChart" style="width: 100%; max-width: 700px">
+            </canvas>
+          </div>
+          <div class="mgraph">
+            <h2>Revenue(last 12 months)</h2>
+            <canvas id="myMonthlyChart" style="width: 100%; max-width: 700px">
+            </canvas>
+          </div>
+        </div>
       </section>
-      <section>
-        <h2>Best Sellers</h2>
-      </section>
+      <section></section>
     </main>
     <script src="/js/dashboard.js"></script>
   </body>
