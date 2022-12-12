@@ -27,6 +27,9 @@ const getDashboardData = async () => {
   const ctx = document.getElementById("myChart").getContext("2d");
   const monthctx = document.getElementById("myMonthlyChart").getContext("2d");
 
+  const monthlyValues = [20, 40, 50, 10, 378, 129, 12, 35, 12, 765, 123, 20];
+  const dailyValues = [276, 985, 510, 310, 378, 129, 122];
+
   let weeklyChart = new Chart(ctx, {
     type: "bar",
     data: {
@@ -42,7 +45,7 @@ const getDashboardData = async () => {
       datasets: [
         {
           label: "Weekly Sales",
-          data: weeklySales,
+          data: dailyValues,
         },
       ],
     },
@@ -68,7 +71,7 @@ const getDashboardData = async () => {
       datasets: [
         {
           label: "Monthly Sales",
-          data: monthlySales,
+          data: monthlyValues,
         },
       ],
     },
@@ -101,10 +104,19 @@ setInterval(() => {
   updateToken();
 }, timer);
 
-const logout = document.getElementById('logout')
-logout.addEventListener('click',()=>{
-    localStorage.removeItem('access')
-    localStorage.removeItem('refresh')
-    location.replace("/");
+const logout = document.getElementById("logout");
+logout.addEventListener("click", () => {
+  localStorage.removeItem("access");
+  localStorage.removeItem("refresh");
+  location.replace("/");
+});
 
-})
+// Toggling charts
+const toggleButton = document.getElementById("toggle");
+const weekGraph = document.querySelector(".wgraph");
+const monthGraph = document.querySelector(".mgraph");
+
+toggleButton.addEventListener("click", function () {
+  weekGraph.classList.toggle("active");
+  monthGraph.classList.toggle("active");
+});

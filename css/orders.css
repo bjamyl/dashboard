@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+nav{
+    margin-top: 20px;
+}
+
 html {
   font-family: "Montserrat", sans-serif;
 }
@@ -32,20 +36,7 @@ nav {
 main {
   margin-left: 200px;
 }
-.summary {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 100px;
-}
 
-.summary-stats {
-  border: 2px solid gainsboro;
-  padding: 10px;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
 
 li {
   cursor: pointer;
@@ -55,19 +46,21 @@ a {
   text-decoration: none;
 }
 
-/* Toggling classes */
-.wgraph {
-  display: none;
+.search {
+    display: flex;
+    gap: 15px;
 }
 
-.wgraph.active {
-  display: block;
+#search-button {
+    padding: 5px 10px;
+    border: none;
+    background-color: coral;
 }
 
-.mgraph {
-  display: none;
-}
+.header-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 100px;
 
-.mgraph.active {
-  display: block;
 }

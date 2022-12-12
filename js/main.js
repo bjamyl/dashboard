@@ -23,31 +23,31 @@ form.addEventListener("submit", async function (e) {
     localStorage.setItem("refresh", JSON.stringify(data.refresh_token));
     location.replace("/dashboard.html");
   } else {
-    console.log("error");
+    alert("Bad credentials")
   }
 });
 
-const refresh_token = JSON.parse(localStorage.getItem("refresh"));
+// const refresh_token = JSON.parse(localStorage.getItem("refresh"));
 
-const updateToken = async () => {
-  let res = await fetch("https://freddy.codesubmit.io/refresh", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${refresh_token}`,
-    },
-  });
-  if (res.status === 200) {
-    const data = await res.json();
-    console.log(data);
-    console.log("Good");
-    localStorage.setItem("access", JSON.stringify(data.access_token));
-  } else {
-    console.log("Error");
-  }
-};
+// const updateToken = async () => {
+//   let res = await fetch("https://freddy.codesubmit.io/refresh", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//       Authorization: `Bearer ${refresh_token}`,
+//     },
+//   });
+//   if (res.status === 200) {
+//     const data = await res.json();
+//     console.log(data);
+//     console.log("Good");
+//     localStorage.setItem("access", JSON.stringify(data.access_token));
+//   } else {
+//     console.log("Error");
+//   }
+// };
 
-let timer = 1000 * 60 * 14;
-setInterval(() => {
-  updateToken();
-}, timer);
+// let timer = 1000 * 60 * 14;
+// setInterval(() => {
+//   updateToken();
+// }, timer);

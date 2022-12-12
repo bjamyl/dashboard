@@ -21,7 +21,7 @@
         <img src="/assets/Freddys_Logo.svg" alt="" />
         <ul class="navbar-links">
           <li><a href="/dashboard.html">Dashboard</a></li>
-          <li><a href=""> Orders </a></li>
+          <li><a href="/orders.html"> Orders </a></li>
           <li id="logout">Logout</li>
         </ul>
       </div>
@@ -42,19 +42,20 @@
           <p>$1456/9 orders</p>
         </div>
       </section>
-      <section>
+      <!-- Charts -->
+      <section
+        style="
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+        "
+      >
         <div
-          style="
-            margin-top: 20px;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: space-between;
-          "
+          style="margin-top: 20px; justify-content: space-between"
+          class="chart-container"
         >
-          <h2>Revenue(last 7 days)</h2>
-        </div>
-        <div class="chart-container">
           <div class="wgraph active">
+            <h2>Revenue(last 7 days)</h2>
             <canvas id="myChart" style="width: 100%; max-width: 700px">
             </canvas>
           </div>
@@ -64,6 +65,12 @@
             </canvas>
           </div>
         </div>
+        <button
+          id="toggle"
+          style="padding: 5px 10px; margin-right: 500px; margin-top: 20px"
+        >
+          Toggle
+        </button>
       </section>
       <section></section>
     </main>
