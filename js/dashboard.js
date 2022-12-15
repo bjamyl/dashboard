@@ -45,7 +45,7 @@ const getDashboardData = async () => {
       datasets: [
         {
           label: "Weekly Sales",
-          data: dailyValues,
+          data: weeklySales,
         },
       ],
     },
@@ -71,7 +71,7 @@ const getDashboardData = async () => {
       datasets: [
         {
           label: "Monthly Sales",
-          data: monthlyValues,
+          data: monthlySales,
         },
       ],
     },
